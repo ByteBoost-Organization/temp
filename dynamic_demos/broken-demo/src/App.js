@@ -63,14 +63,14 @@ function App() {
 
   useEffect(() => {
     // Prevent duplicate Glimt script injection
-    const existingScript = document.querySelector('script[src="https://dev.cdn.glimt.support/browser/glimt.js"]');
+    const existingScript = document.querySelector('script[src="https://cdn.glimt.support/browser/glimt.js"]');
     let script;
     if (!existingScript) {
       script = document.createElement('script');
-      script.setAttribute('data-public-key', 'pk_44b5dced3f9ea7a0146b1fded2a6aa15ce0b7a355ddf37c06fdb3af10b1ceee6');
+      script.setAttribute('data-public-key', 'pk_ad3f49947acb7cc3f1e285c4b932b6d0572c81df8caa7de4ca4ed43e7aada548');
       script.setAttribute('data-persist', '');
-      script.setAttribute('data-api-url', 'http://localhost:4000/v1beta');
-      script.src = 'https://dev.cdn.glimt.support/browser/glimt.js';
+      // script.setAttribute('data-api-url', 'http://localhost:4000/v1beta');
+      script.src = 'https://cdn.glimt.support/browser/glimt.js';
       document.body.appendChild(script);
     }
 
